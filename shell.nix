@@ -1,5 +1,5 @@
 let
-  pre-commit = import ./git-hooks.nix;
+  pre-commit = import ./modules/git-hooks.nix;
 in
 (import <nixpkgs> { }).mkShell {
   shellHook = ''
