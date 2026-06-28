@@ -17,7 +17,7 @@ in
     ./home.nix
 
     # Include stylix
-    #./stylix.nix
+    # ./stylix.nix
   ];
 
   # Bootloader.

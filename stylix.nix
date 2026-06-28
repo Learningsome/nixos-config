@@ -9,9 +9,9 @@ in
 
   stylix = {
     enable = true;
-    autoEnable = true;
+    autoEnable = false;
 
     # image = ./wallpaper.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
   };
 }
