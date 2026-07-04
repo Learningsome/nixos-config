@@ -9,13 +9,5 @@
     # IaC
     terraform
     terragrunt
-
-    # Development
-    obsidian
-    termius
-
-    # Social
-    discord
-    telegram-desktop
   ];
 }

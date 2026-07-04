@@ -48,6 +48,12 @@
           modules = [
             ./hosts/${hostname}/configuration.nix
             inputs.home-manager.nixosModules.home-manager
+            {
+              useUserPackages = true;
+              useGlobalPkgs = true;
+              backupFileExtension = "backup";
+              users.nikolaj = import ./home/nikolaj;
+            }
           ];
         };
       };

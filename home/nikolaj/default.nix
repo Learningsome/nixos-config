@@ -8,6 +8,7 @@
     ./vim.nix
     ./vscodium.nix
     ./packages.nix
+    ./gui.nix
   ];
 
   home = {

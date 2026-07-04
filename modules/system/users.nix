@@ -15,12 +15,4 @@
       "docker"
     ];
   };
-
-  home-manager = {
-    useUserPackages = true;
-    useGlobalPkgs = true;
-    backupFileExtension = "backup";
-
-    users.nikolaj = import ../../home/nikolaj/default.nix;
-  };
 }
