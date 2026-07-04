@@ -40,16 +40,16 @@
       forEachSystem = nixpkgs.lib.genAttrs (import systems);
     in
     {
-      nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
-        inherit system;
+      nixosConfigurations = {
+        ${hostname} = nixpkgs.lib.nixosSystem {
+          inherit system;
+          extraSpecialArgs = { inherit inputs pkgs-unstable; };
 
-        specialArgs = { inherit inputs pkgs-unstable; };
-
-        modules = [
-          ./hosts/${hostname}/configuration.nix
-
-          inputs.home-manager.nixosModules.home-manager
-        ];
+          modules = [
+            ./hosts/${hostname}/configuration.nix
+            inputs.home-manager.nixosModules.home-manager
+          ];
+        };
       };
 
       # Run the hooks with `nix fmt`.
