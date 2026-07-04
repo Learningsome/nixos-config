@@ -1,4 +1,4 @@
-# modules/system/fonts.nix
+# modules/common/fonts.nix
 
 { config, pkgs, ... }:
 

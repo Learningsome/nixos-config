@@ -1,15 +1,17 @@
-# modules/system/default.nix
+# modules/common/default.nix
 
 { config, pkgs, ... }:
 
 {
   imports = [
-    ./boot.nix
+    ./nix.nix
     ./locale.nix
+    ./boot.nix
     ./networking.nix
     ./users.nix
     ./fonts.nix
     ./packages.nix
-    ./nix.nix
   ];
+
+  nixpkgs.config.allowUnfree = true;
 }

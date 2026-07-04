@@ -1,10 +1,8 @@
-# modules/system/nix.nix
+# modules/common/nix.nix
 
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
-
   nix.settings = {
     auto-optimise-store = true;
     experimental-features = [

@@ -1,14 +1,20 @@
-# hosts/nixos-btw/configuration.nix
+# hosts/nixos-btw/default.nix
 
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
 
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/system
+    ../../modules/common
     ../../modules/desktop
     ../../modules/services
   ];
 
+  networking.hostName = "nixos-btw";
   system.stateVersion = "26.05";
 }

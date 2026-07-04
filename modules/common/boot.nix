@@ -1,4 +1,4 @@
-# modules/system/boot.nix
+# modules/common/boot.nix
 
 { config, pkgs, ... }:
 let

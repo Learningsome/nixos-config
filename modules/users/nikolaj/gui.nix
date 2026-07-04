@@ -1,3 +1,5 @@
+# ./modules/users/nikolaj/gui.nix
+
 { config, pkgs, ... }:
 
 {

@@ -46,14 +46,14 @@
           specialArgs = { inherit inputs pkgs-unstable; };
 
           modules = [
-            ./hosts/${hostname}/configuration.nix
+            ./hosts/${hostname}
             inputs.home-manager.nixosModules.home-manager
             {
               home-manager = {
                 useUserPackages = true;
                 useGlobalPkgs = true;
                 backupFileExtension = "backup";
-                users.nikolaj = import ./home/nikolaj;
+                users.nikolaj = import ./modules/users/nikolaj;
               };
             }
           ];

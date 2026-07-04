@@ -1,12 +1,9 @@
-# modules/system/networking.nix
+# modules/common/networking.nix
 
 { config, pkgs, ... }:
 
 {
-  networking = {
-    hostName = "nixos-btw";
-    networkmanager.enable = true;
-  };
+  networking.networkmanager.enable = true;
 
   # Enables wireless support via wpa_supplicant.
   # networking.wireless.enable = true;

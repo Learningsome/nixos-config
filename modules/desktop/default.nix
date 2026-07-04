@@ -4,7 +4,7 @@
 
 {
   imports = [
-    ./plasma-desktop.nix
+    ./plasma.nix
     ./pipewire.nix
     ./printing.nix
     ./bluetooth.nix

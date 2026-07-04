@@ -1,4 +1,4 @@
-# modules/system/locale.nix
+# modules/common/locale.nix
 
 { config, pkgs, ... }:
 

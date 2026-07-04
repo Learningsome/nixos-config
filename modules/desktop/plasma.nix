@@ -1,4 +1,4 @@
-# modules/desktop/manager.nix
+# modules/desktop/plasma.nix
 
 { config, pkgs, ... }:
 
