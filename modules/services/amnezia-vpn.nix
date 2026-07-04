@@ -1,10 +1,16 @@
 # modules/services/amnezia-vpn.nix
 
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 let
-  unstable = import <nixos-unstable> {
-    inherit (config.nixpkgs) config;
+  unstable = import inputs.nixpkgs-unstable {
+    system = pkgs.system;
+    config = config.nixpkgs.config;
   };
 in
 {

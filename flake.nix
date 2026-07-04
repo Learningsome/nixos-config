@@ -13,11 +13,14 @@
 
   outputs =
     { self, nixpkgs, ... }@inputs:
-
+    let
+      system = "x86_64-linux";
+    in
     {
       nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
+        inherit system;
+
         specialArgs = { inherit inputs; };
-        system = "x86_64-linux";
 
         modules = [
           ./configuration.nix
