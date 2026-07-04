@@ -27,7 +27,7 @@
       shellAliases = {
         btw = "echo i use nixos, btw";
         zarina = "echo i love Zarina, btw";
-        nrs = "sudo nixos-rebuild switch ~/nixos-config#nixos-btw";
+        nrs = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos-btw";
         cat = "bat";
         ls = "eza --icons=auto";
         tree = "ls -T";

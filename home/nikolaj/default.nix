@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./shell.nix
+    ./zsh.nix
     ./git.nix
     ./kitty.nix
     ./vim.nix
