@@ -1,4 +1,4 @@
-_:
+{ config, pkgs, ... }:
 
 {
   programs.kitty = {
@@ -6,8 +6,10 @@ _:
     enableGitIntegration = true;
     shellIntegration.enableZshIntegration = true;
 
+    themeFile = "OneDark-Pro";
+
     font = {
-      name = "JetBrains Mono Nerd Font";
+      name = "JetBrainsMono Nerd Font";
       size = 14;
     };
 

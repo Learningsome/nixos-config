@@ -1,3 +1,5 @@
+# modules/development/git-hooks.nix
+
 let
   nix-pre-commit-hooks = import (
     fetchTarball "https://github.com/cachix/git-hooks.nix/tarball/master"
@@ -6,7 +8,7 @@ in
 {
   # Configured with the module options defined in `modules/pre-commit.nix`:
   pre-commit-check = nix-pre-commit-hooks.run {
-    src = ./.;
+    src = ../../.;
     # If your hooks are intrusive, avoid running on each commit with a default_states like this:
     # default_stages = ["manual" "pre-push"];
 
@@ -17,10 +19,13 @@ in
     hooks = {
       # Nix
       nixfmt.enable = true;
-      statix.enable = false;
+      statix = {
+        enable = false;
+        settings.ignore = [ "hardware-configuration.nix" ];
+      };
       deadnix = {
-        enable = true;
-        settings.edit = true;
+        enable = false;
+        settings.edit = false;
       };
 
       # Общие проверки

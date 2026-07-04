@@ -1,4 +1,4 @@
-_:
+{ config, pkgs, ... }:
 
 {
   programs = {
@@ -13,7 +13,6 @@ _:
         plugins = [
           "git"
           "docker"
-          "docker-compose"
           "kubectl"
           "helm"
           "ansible"
@@ -21,7 +20,6 @@ _:
           "sudo"
           "history"
           "extract"
-          "command-not-found"
         ];
         theme = "robbyrussell";
       };
@@ -33,23 +31,6 @@ _:
         cat = "bat";
         ls = "eza --icons=auto";
         tree = "ls -T";
-        dnx = "deadnix";
-        stx = "statix check";
-      };
-    };
-
-    git = {
-      enable = true;
-
-      settings = {
-        user.name = "Nikolaj Kashirskij";
-        user.email = "nikolajkashirskij@gmail.com";
-        core.editor = "vim";
-
-        pull.rebase = true;
-        init.defaultBranch = "main";
-
-        color.ui = true;
       };
     };
 

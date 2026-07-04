@@ -1,4 +1,4 @@
-{ ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -6,6 +6,7 @@
     ./git.nix
     ./kitty.nix
     ./vim.nix
+    ./vscodium.nix
     ./packages.nix
   ];
 

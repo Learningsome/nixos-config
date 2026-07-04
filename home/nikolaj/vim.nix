@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.vim = {
@@ -48,7 +48,7 @@
 
       " Настройки темы
       colorscheme onedark
-      let g:lightline = { 'colorscheme': 'onedark' }
+      let g:lightline = { 'colorscheme': 'onedark', }
     '';
   };
 }

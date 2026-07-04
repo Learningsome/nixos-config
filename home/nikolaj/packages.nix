@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -6,30 +6,16 @@
     bat
     eza
 
-    # GUI
-    obsidian
-    termius
-
     # IaC
     terraform
     terragrunt
 
-    # Nix LSP
-    nixfmt
-    nil
-    deadnix
-    statix
+    # Development
+    obsidian
+    termius
 
-    # VSCodium + extensions
-    (vscode-with-extensions.override {
-      vscode = vscodium;
-
-      vscodeExtensions = with vscode-extensions; [
-        jnoortheen.nix-ide # Поддержка языка Nix
-        alefragnani.project-manager # Менеджер проектов
-        ms-azuretools.vscode-docker # Работа с Docker
-        hashicorp.terraform # IaC
-      ];
-    })
+    # Social
+    discord
+    telegram-desktop
   ];
 }
