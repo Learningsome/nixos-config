@@ -1,3 +1,5 @@
+# home/nikolaj/vim.nix
+
 { config, pkgs, ... }:
 
 {

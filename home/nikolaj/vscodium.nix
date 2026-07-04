@@ -1,3 +1,5 @@
+# home/nikolaj/vscodium.nix
+
 { config, pkgs, ... }:
 
 {

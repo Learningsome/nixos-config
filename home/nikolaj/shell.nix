@@ -1,3 +1,5 @@
+# home/nikolaj/shell.nix
+
 { config, pkgs, ... }:
 
 {

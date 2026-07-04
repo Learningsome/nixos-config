@@ -1,3 +1,5 @@
+# home/nikolaj/kitty.nix
+
 { config, pkgs, ... }:
 
 {
