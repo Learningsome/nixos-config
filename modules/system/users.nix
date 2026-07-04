@@ -21,8 +21,6 @@
     useGlobalPkgs = true;
     backupFileExtension = "backup";
 
-    users.nikolaj = {
-      imports = [ ../../home/nikolaj/default.nix ];
-    };
+    users.nikolaj = import ../../home/nikolaj/default.nix;
   };
 }
