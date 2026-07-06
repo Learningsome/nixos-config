@@ -4,9 +4,9 @@
 
 {
   imports = [
-    ./plasma.nix
+    ./xserver.nix
+    ./niri.nix
     ./pipewire.nix
     ./printing.nix
-    ./bluetooth.nix
   ];
 }

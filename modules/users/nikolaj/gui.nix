@@ -9,7 +9,7 @@
     termius
 
     # Social
-    discord
+    vesktop
     telegram-desktop
   ];
 }

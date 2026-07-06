@@ -11,6 +11,8 @@
     btop
     fastfetch
     gnumake
+    nh
+    nvd
 
     # Browser of choice
     chromium

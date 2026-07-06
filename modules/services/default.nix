@@ -8,5 +8,8 @@
     ./amnezia-vpn.nix
     ./timesyncd.nix
     ./openssh.nix
+    ./power-profiles.nix
+    ./upower.nix
+    ./noctalia-greeter.nix
   ];
 }

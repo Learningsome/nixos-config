@@ -8,6 +8,7 @@
 
   programs.vscodium = {
     enable = true;
+    mutableExtensionsDir = true;
 
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
@@ -31,7 +32,7 @@
         "explorer.compactFolders" = false;
 
         # Активация темы
-        "workbench.colorTheme" = "One Dark Pro";
+        "workbench.colorTheme" = "NoctaliaTheme";
 
         # Отключение телеметрии и A/B тестов
         "telemetry.telemetryLevel" = "off";

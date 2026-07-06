@@ -28,6 +28,8 @@
         btw = "echo i use nixos, btw";
         zarina = "echo i love Zarina, btw";
         nrs = "sudo nixos-rebuild switch --flake ~/nixos-config#nixos-btw";
+        nrb = "sudo nixos-rebuild build --flake ~/nixos-config#nixos-btw && nvd diff /run/current-system result";
+        nfl = "nix flake lock --update-input";
         cat = "bat";
         ls = "eza --icons=auto";
         tree = "ls -T";

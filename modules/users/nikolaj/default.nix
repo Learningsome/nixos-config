@@ -11,19 +11,12 @@
     ./vscodium.nix
     ./packages.nix
     ./gui.nix
+    ./noctalia.nix
   ];
 
   home = {
     homeDirectory = "/home/nikolaj";
     stateVersion = "26.05";
     username = "nikolaj";
-  };
-
-  # Можно потом вынести в theme.nix или что-то такое
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Breeze";
-    };
   };
 }

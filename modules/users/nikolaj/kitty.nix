@@ -1,12 +1,14 @@
 { config, pkgs, ... }:
-
+let
+  NoctaliaTheme = "~/.config/kitty/themes/noctalia.conf";
+in
 {
   programs.kitty = {
     enable = true;
     enableGitIntegration = true;
     shellIntegration.enableZshIntegration = true;
 
-    themeFile = "OneDark-Pro";
+    # themeFile = "OneDark-Pro";
 
     font = {
       name = "JetBrainsMono Nerd Font";
@@ -14,6 +16,9 @@
     };
 
     settings = {
+      # Явно подключаем файл темы по относительному пути
+      include = NoctaliaTheme;
+
       # Автошрифты
       bold_font = "auto";
       italic_font = "auto";

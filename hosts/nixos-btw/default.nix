@@ -13,6 +13,7 @@
     ../../modules/common
     ../../modules/desktop
     ../../modules/services
+    ../../modules/hardware
   ];
 
   networking.hostName = "nixos-btw";
