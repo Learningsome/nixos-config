@@ -3,7 +3,11 @@
 { config, pkgs, ... }:
 
 {
+  # Enable networkmanager
   networking.networkmanager.enable = true;
+
+  # Network manager will not wait for online now
+  systemd.services.NetworkManager-wait-online.enable = false;
 
   # Enables wireless support via wpa_supplicant.
   # networking.wireless.enable = true;

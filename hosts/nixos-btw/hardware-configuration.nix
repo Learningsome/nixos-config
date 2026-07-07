@@ -16,26 +16,37 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = [
-    "xhci_pci"
-    "thunderbolt"
-    "nvme"
-    "uas"
-    "sd_mod"
-  ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot = {
+    initrd = {
+      kernelModules = [ ];
+      availableKernelModules = [
+        "xhci_pci"
+        "thunderbolt"
+        "nvme"
+        "uas"
+        "sd_mod"
+      ];
+    };
+    kernelModules = [ "kvm-intel" ];
+    extraModulePackages = [ ];
+  };
 
   fileSystems."/" = {
     device = "/dev/mapper/luks-6be66423-43d0-4a66-b0df-6baa240de18c";
     fsType = "ext4";
   };
 
-  boot.initrd.luks.devices."luks-6be66423-43d0-4a66-b0df-6baa240de18c".device =
-    "/dev/disk/by-uuid/6be66423-43d0-4a66-b0df-6baa240de18c";
-  boot.initrd.luks.devices."luks-77cbdfe7-d621-4ed0-ab7e-f3b1c3ab632d".device =
-    "/dev/disk/by-uuid/77cbdfe7-d621-4ed0-ab7e-f3b1c3ab632d";
+  boot.initrd.luks.devices = {
+    "luks-6be66423-43d0-4a66-b0df-6baa240de18c" = {
+      device = "/dev/disk/by-uuid/6be66423-43d0-4a66-b0df-6baa240de18c";
+      crypttabExtraOpts = [ "tpm2-device=auto" ];
+    };
+
+    "luks-77cbdfe7-d621-4ed0-ab7e-f3b1c3ab632d" = {
+      device = "/dev/disk/by-uuid/77cbdfe7-d621-4ed0-ab7e-f3b1c3ab632d";
+      crypttabExtraOpts = [ "tpm2-device=auto" ];
+    };
+  };
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/5701-B591";
