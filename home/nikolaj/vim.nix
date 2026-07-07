@@ -9,7 +9,7 @@
       vim-nix
       fzf-vim
       lightline-vim
-      onedark-vim
+      # onedark-vim
     ];
 
     settings = {
@@ -47,8 +47,8 @@
       set incsearch             " интерактивный поиск при вводе
 
       " Настройки темы
-      colorscheme onedark
-      let g:lightline = { 'colorscheme': 'onedark', }
+      " colorscheme onedark
+      " let g:lightline = { 'colorscheme': 'onedark', }
     '';
   };
 }
