@@ -7,6 +7,7 @@
     # Terminal
     wget
     curl
+    file
     git
     btop
     fastfetch

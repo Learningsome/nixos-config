@@ -74,7 +74,7 @@
                 useGlobalPkgs = true;
                 backupFileExtension = "backup";
                 extraSpecialArgs = { inherit inputs; };
-                users.nikolaj = import ./modules/users/nikolaj;
+                users.nikolaj = import ./home/nikolaj;
               };
             }
           ];
