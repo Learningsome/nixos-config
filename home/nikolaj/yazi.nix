@@ -1,14 +1,7 @@
 # home/nikolaj/yazi.nix
 
 { config, pkgs, ... }:
-let
-  yazi-plugins = pkgs.fetchFromGitHub {
-    owner = "yazi-rs";
-    repo = "plugins";
-    rev = "main";
-    hash = "sha256-f4y952sUF/lrHMX6enQts/obk2DeatqAcaVHfjTD65k=";
-  };
-in
+
 {
   programs.yazi = {
     enable = true;
@@ -23,27 +16,17 @@ in
         max_width = 1000;
         max_height = 1000;
       };
-      plugin.prepend_fetchers = [
-        {
-          url = "*";
-          run = "git";
-          group = "git";
-        }
-        {
-          url = "*/";
-          run = "git";
-          group = "git";
-        }
-      ];
     };
 
-    plugins = {
-      git = "${yazi-plugins}/git.yazi";
-      chmod = "${yazi-plugins}/chmod.yazi";
-      vcs-files = "${yazi-plugins}/vcs-files.yazi";
-      full-border = "${yazi-plugins}/full-border.yazi";
-      smart-enter = "${yazi-plugins}/smart-enter.yazi";
-      toggle-pane = "${yazi-plugins}/toggle-pane.yazi";
+    plugins = with pkgs.yaziPlugins; {
+      inherit
+        git
+        chmod
+        vcs-files
+        full-border
+        smart-enter
+        toggle-pane
+        ;
     };
 
     initLua = ''
