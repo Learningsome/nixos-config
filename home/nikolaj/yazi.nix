@@ -9,6 +9,11 @@
     shellWrapperName = "y";
 
     settings = {
+      # Works but i don't want to
+      # theme = {
+      #   light = "noctalia";
+      #   dark = "noctalia";
+      # };
       mgr = {
         show_hidden = true;
       };
@@ -16,6 +21,19 @@
         max_width = 1000;
         max_height = 1000;
       };
+
+      plugin.prepend_fetchers = [
+        {
+          url = "*";
+          run = "git";
+          group = "git";
+        }
+        {
+          url = "*/";
+          run = "git";
+          group = "git";
+        }
+      ];
     };
 
     plugins = with pkgs.yaziPlugins; {
@@ -26,6 +44,7 @@
         full-border
         smart-enter
         toggle-pane
+        starship
         ;
     };
 
@@ -38,6 +57,7 @@
       	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
       	type = ui.Border.ROUNDED,
       }
+      require("starship"):setup()
     '';
 
     keymap = {
