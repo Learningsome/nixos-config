@@ -1,3 +1,5 @@
+# home/nikolaj/git.nix
+
 { config, pkgs, ... }:
 
 {

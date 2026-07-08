@@ -1,3 +1,5 @@
+# home/nikolaj/zsh.nix
+
 { config, pkgs, ... }:
 
 {
@@ -30,6 +32,7 @@
         gs = "git status";
         ga = "git add";
         gc = "git commit";
+        gcm = "git commit -m";
         gp = "git push";
         gl = "git pull";
         gd = "git diff";

@@ -1,3 +1,5 @@
+# home/nikolaj/kitty.nix
+
 { config, pkgs, ... }:
 let
   NoctaliaTheme = "~/.config/kitty/themes/noctalia.conf";

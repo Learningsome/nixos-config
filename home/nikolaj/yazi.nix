@@ -1,10 +1,12 @@
+# home/nikolaj/yazi.nix
+
 { config, pkgs, ... }:
 let
   yazi-plugins = pkgs.fetchFromGitHub {
     owner = "yazi-rs";
     repo = "plugins";
     rev = "main";
-    hash = pkgs.lib.fakeHash;
+    hash = "sha256-f4y952sUF/lrHMX6enQts/obk2DeatqAcaVHfjTD65k=";
   };
 in
 {
@@ -53,7 +55,6 @@ in
       	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
       	type = ui.Border.ROUNDED,
       }
-      require("smart-enter"):setup()
     '';
 
     keymap = {

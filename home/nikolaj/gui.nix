@@ -1,4 +1,4 @@
-# ./modules/users/nikolaj/gui.nix
+# home/nikolaj/gui.nix
 
 { config, pkgs, ... }:
 

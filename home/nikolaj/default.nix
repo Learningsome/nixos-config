@@ -1,4 +1,4 @@
-# ./modules/users/nikolaj/default.nix
+# home/nikolaj/default.nix
 
 { config, pkgs, ... }:
 
