@@ -12,6 +12,7 @@
     ./packages.nix
     ./gui.nix
     ./noctalia.nix
+    ./yazi.nix
   ];
 
   home = {
