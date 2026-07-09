@@ -1,7 +1,9 @@
 # home/nikolaj/yazi.nix
 
 { config, pkgs, ... }:
-
+let
+  flavor = "git-signs";
+in
 {
   programs.yazi = {
     enable = true;
@@ -9,14 +11,10 @@
     shellWrapperName = "y";
 
     settings = {
-      # Works but i don't want to
-      # theme = {
-      #   light = "noctalia";
-      #   dark = "noctalia";
-      # };
       mgr = {
         show_hidden = true;
       };
+
       preview = {
         max_width = 1000;
         max_height = 1000;
@@ -96,4 +94,22 @@
       ];
     };
   };
+
+  # My flavor to override git plugin icons
+  xdg.configFile."yazi/flavors/${flavor}.yazi/flavor.toml".text = ''
+    [git]
+    untracked_sign  = "[?]"
+    modified_sign   = "[!]"
+    deleted_sign    = "[-]"
+    added_sign      = "[+]"
+    ignored_sign    = "[·]"
+    updated_sign    = "[~]"
+  '';
+
+  # Applying my flavor
+  xdg.configFile."yazi/theme.toml".text = ''
+    [flavor]
+    dark = "${flavor}"
+    light = "${flavor}"
+  '';
 }
