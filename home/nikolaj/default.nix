@@ -13,6 +13,7 @@
     ./gui.nix
     ./noctalia.nix
     ./yazi.nix
+    ./udiskie.nix
   ];
 
   home = {

@@ -11,5 +11,6 @@
     ./power-profiles.nix
     ./upower.nix
     ./noctalia-greeter.nix
+    ./udisks2.nix
   ];
 }

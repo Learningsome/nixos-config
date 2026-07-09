@@ -45,6 +45,7 @@
         smart-enter
         toggle-pane
         starship
+        mount
         ;
     };
 
@@ -87,6 +88,10 @@
           on = "T";
           run = "plugin toggle-pane max-preview";
           desc = "Maximize or restore the preview pane";
+        }
+        {
+          on = "M";
+          run = "plugin mount";
         }
       ];
     };
