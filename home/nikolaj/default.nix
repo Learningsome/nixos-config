@@ -14,6 +14,8 @@
     ./noctalia.nix
     ./yazi.nix
     ./udiskie.nix
+    ./zen-browser.nix
+    ./librewolf.nix
   ];
 
   home = {
