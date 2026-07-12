@@ -28,15 +28,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Firefox core based browser
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs = {
-        nixpkgs.follows = "nixpkgs-unstable";
-        home-manager.follows = "home-manager";
-      };
-    };
-
     # Git hooks dependencies
     systems.url = "github:nix-systems/default";
     git-hooks = {
@@ -53,7 +44,6 @@
       home-manager,
       noctalia,
       noctalia-greeter,
-      zen-browser,
       systems,
       git-hooks,
       ...
