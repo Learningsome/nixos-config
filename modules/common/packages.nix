@@ -17,5 +17,8 @@
 
     # Browser of choice
     chromium
+
+    # Media player
+    vlc
   ];
 }

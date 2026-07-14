@@ -12,5 +12,6 @@
     ./upower.nix
     ./noctalia-greeter.nix
     ./udisks2.nix
+    ./thermald.nix
   ];
 }
