@@ -6,6 +6,12 @@
   nix.settings = {
     auto-optimise-store = true;
     warn-dirty = false;
+
+    trusted-users = [
+      "root"
+      "@wheel"
+    ];
+
     experimental-features = [
       "nix-command"
       "flakes"

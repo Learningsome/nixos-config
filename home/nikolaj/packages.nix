@@ -8,6 +8,9 @@
     bat
     eza
 
+    # Will test this
+    devenv
+
     # IaC
     terraform
     terragrunt
