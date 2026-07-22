@@ -1,14 +1,15 @@
 # home/nikolaj/zsh.nix
-
-{ config, pkgs, ... }:
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   mkZshPlugin = pkg: file: {
     name = pkg.pname;
     inherit (pkg) src;
     inherit file;
   };
-in
-{
+in {
   programs = {
     zsh = {
       enable = true;
@@ -86,7 +87,7 @@ in
       enable = true;
       enableZshIntegration = true;
 
-      options = [ "--cmd cd" ];
+      options = ["--cmd cd"];
     };
 
     fzf = {

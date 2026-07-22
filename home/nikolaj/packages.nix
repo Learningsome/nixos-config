@@ -1,8 +1,9 @@
 # home/nikolaj/packages.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     # Terminal utilities
     bat

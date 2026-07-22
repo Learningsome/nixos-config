@@ -1,8 +1,9 @@
 # home/nikolaj/vim.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.vim = {
     enable = true;
     defaultEditor = true;

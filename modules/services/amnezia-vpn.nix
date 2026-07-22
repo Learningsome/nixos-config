@@ -1,10 +1,7 @@
 # modules/services/amnezia-vpn.nix
-
-{ pkgs-unstable, ... }:
-
-{
+{pkgs, ...}: {
   programs.amnezia-vpn = {
     enable = true;
-    package = pkgs-unstable.amnezia-vpn;
+    package = pkgs.unstable.amnezia-vpn;
   };
 }

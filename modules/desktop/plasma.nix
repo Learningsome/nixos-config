@@ -1,8 +1,9 @@
 # modules/desktop/plasma.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   services = {
     # Enable the KDE Plasma Desktop Environment.
     displayManager.sddm.enable = true;

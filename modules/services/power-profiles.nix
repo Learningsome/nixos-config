@@ -1,7 +1,8 @@
 # modules/services/power-profiles.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   services.power-profiles-daemon.enable = true;
 }

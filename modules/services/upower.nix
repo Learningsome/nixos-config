@@ -1,7 +1,8 @@
 # modules/services/upower.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   services.upower.enable = true;
 }

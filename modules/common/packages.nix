@@ -1,8 +1,9 @@
 # modules/common/packages.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     # Terminal
     wget

@@ -1,8 +1,9 @@
 # modules/common/fonts.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];

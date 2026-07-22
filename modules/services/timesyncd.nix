@@ -1,7 +1,8 @@
 # modules/services/timesyncd.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   services.timesyncd.enable = true;
 }

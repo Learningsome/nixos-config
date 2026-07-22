@@ -1,12 +1,13 @@
 # modules/common/locale.nix
-
-{ config, pkgs, ... }:
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   timezone = "Europe/Moscow";
   defaultLocale = "en_US.UTF-8";
   extraLocale = "ru_RU.UTF-8";
-in
-{
+in {
   time.timeZone = timezone;
 
   i18n = {

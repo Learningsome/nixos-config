@@ -1,20 +1,17 @@
 # modules/desktop/niri.nix
-
 {
   config,
-  pkgs-unstable,
+  pkgs,
   lib,
   ...
-}:
-
-{
+}: {
   programs.niri = {
     enable = true;
-    package = pkgs-unstable.niri;
+    package = pkgs.unstable.niri;
   };
 
   # Xwayland support
-  environment.systemPackages = with pkgs-unstable; [
+  environment.systemPackages = with pkgs.unstable; [
     xwayland-satellite
   ];
 

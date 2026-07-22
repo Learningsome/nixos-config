@@ -1,8 +1,9 @@
 # modules/common/default.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./nix.nix
     ./locale.nix

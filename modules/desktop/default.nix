@@ -1,8 +1,9 @@
 # modules/desktop/default.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./xserver.nix
     ./niri.nix

@@ -1,8 +1,9 @@
 # home/nikolaj/gui.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     # Development
     obsidian

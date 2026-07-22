@@ -1,10 +1,12 @@
 # home/nikolaj/vscodium.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     nixfmt # Nix formatter
+    alejandra
     nil # Nix LSP
   ];
 
@@ -40,16 +42,16 @@
         # Отключение телеметрии и A/B тестов
         "telemetry.telemetryLevel" = "off";
 
-        # Интеграция Nix LSP (nil + nixfmt)
+        # Интеграция Nix LSP (nil + alejandra)
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "nil";
         "nix.serverSettings" = {
           "nil" = {
             "formatting" = {
-              "command" = [ "nixfmt" ];
+              "command" = ["alejandra"];
             };
             "diagnostics" = {
-              "ignored" = [ "unused_binding" ];
+              "ignored" = ["unused_binding"];
             };
           };
         };

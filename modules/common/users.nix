@@ -1,8 +1,9 @@
 # modules/common/users.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.zsh.enable = true;
 
   users.users.nikolaj = {

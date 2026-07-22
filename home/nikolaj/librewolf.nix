@@ -1,8 +1,10 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.librewolf = {
-    enable = true;
+    enable = false;
 
     settings = {
       # Включить Firefox Sync

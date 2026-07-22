@@ -1,13 +1,10 @@
 # hosts/nixos-btw/default.nix
-
 {
   config,
   pkgs,
   pkgs-unstable,
   ...
-}:
-
-{
+}: {
   imports = [
     ./hardware-configuration.nix
     ../../modules/common

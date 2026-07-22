@@ -1,8 +1,9 @@
 # home/nikolaj/git.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.git = {
     enable = true;
 

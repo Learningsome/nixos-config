@@ -1,8 +1,5 @@
 # home/nikolaj/noctalia.nix
-
-{ inputs, ... }:
-
-{
+{inputs, ...}: {
   imports = [
     inputs.noctalia.homeModules.default
   ];

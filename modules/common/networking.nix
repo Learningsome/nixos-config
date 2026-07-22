@@ -1,8 +1,9 @@
 # modules/common/networking.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Enable networkmanager
   networking.networkmanager.enable = true;
 

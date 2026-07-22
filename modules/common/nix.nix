@@ -1,8 +1,9 @@
 # modules/common/nix.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   nix.settings = {
     auto-optimise-store = true;
     warn-dirty = false;

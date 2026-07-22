@@ -1,9 +1,11 @@
-{ pkgs, lib, ... }:
-let
+{
+  pkgs,
+  lib,
+  ...
+}: let
   terminal = "kitty";
   fileManager = "yazi";
-in
-{
+in {
   services.udiskie = {
     enable = true;
     settings = {

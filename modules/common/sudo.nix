@@ -1,13 +1,14 @@
 # modules/common/sudo.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   security.sudo = {
     enable = true;
     extraRules = [
       {
-        groups = [ "wheel" ];
+        groups = ["wheel"];
         commands = [
           {
             # Смена темы noctalia-greeter без запроса пароля

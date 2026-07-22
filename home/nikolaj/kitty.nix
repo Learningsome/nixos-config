@@ -1,10 +1,11 @@
 # home/nikolaj/kitty.nix
-
-{ config, pkgs, ... }:
-let
-  NoctaliaTheme = "~/.config/kitty/themes/noctalia.conf";
-in
 {
+  config,
+  pkgs,
+  ...
+}: let
+  NoctaliaTheme = "~/.config/kitty/themes/noctalia.conf";
+in {
   programs.kitty = {
     enable = true;
     enableGitIntegration = true;

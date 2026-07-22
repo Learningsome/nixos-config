@@ -1,10 +1,11 @@
 # home/nikolaj/yazi.nix
-
-{ config, pkgs, ... }:
-let
-  flavor = "git-signs";
-in
 {
+  config,
+  pkgs,
+  ...
+}: let
+  flavor = "git-signs";
+in {
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;

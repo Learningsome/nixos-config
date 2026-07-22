@@ -4,9 +4,7 @@
   config,
   inputs,
   ...
-}:
-
-{
+}: {
   # https://devenv.sh/basics/
   env.GREET = "NixOS";
 
@@ -43,7 +41,7 @@
     ];
 
     hooks = {
-      nixfmt.enable = true;
+      alejandra.enable = true;
       statix.enable = true;
 
       # Общие проверки

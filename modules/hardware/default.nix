@@ -1,8 +1,9 @@
 # modules/hardware/default.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./intel.nix
     ./bluetooth.nix

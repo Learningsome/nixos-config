@@ -1,8 +1,9 @@
 # modules/services/default.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./docker.nix
     ./amnezia-vpn.nix

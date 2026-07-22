@@ -1,8 +1,9 @@
 # home/nikolaj/default.nix
-
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./zsh.nix
     ./git.nix
@@ -15,6 +16,7 @@
     ./yazi.nix
     ./udiskie.nix
     ./librewolf.nix
+    ./firefox.nix
     ./keepassxc.nix
   ];
 
