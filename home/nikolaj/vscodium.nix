@@ -13,6 +13,7 @@
     mutableExtensionsDir = true;
 
     profiles.default = {
+      enableExtensionUpdateCheck = false;
       extensions = with pkgs.vscode-extensions; [
         jnoortheen.nix-ide # Поддержка языка Nix
         alefragnani.project-manager # Менеджер проектов
@@ -38,7 +39,6 @@
 
         # Отключение телеметрии и A/B тестов
         "telemetry.telemetryLevel" = "off";
-        "workbench.enableExperiments" = false;
 
         # Интеграция Nix LSP (nil + nixfmt)
         "nix.enableLanguageServer" = true;

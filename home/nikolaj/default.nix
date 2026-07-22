@@ -15,6 +15,7 @@
     ./yazi.nix
     ./udiskie.nix
     ./librewolf.nix
+    ./keepassxc.nix
   ];
 
   home = {

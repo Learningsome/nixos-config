@@ -19,6 +19,6 @@
     chromium
 
     # Media player
-    vlc
+    mpv
   ];
 }

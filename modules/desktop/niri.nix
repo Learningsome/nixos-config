@@ -3,6 +3,7 @@
 {
   config,
   pkgs-unstable,
+  lib,
   ...
 }:
 
@@ -12,10 +13,13 @@
     package = pkgs-unstable.niri;
   };
 
-  # xwayland support
+  # Xwayland support
   environment.systemPackages = with pkgs-unstable; [
     xwayland-satellite
   ];
+
+  # Will be using KeePassXC
+  # services.gnome.gnome-keyring.enable = lib.mkForce false;
 
   # NixOS otherwise injects a stripped PATH via Environment= on the niri.service
   # unit which shadows the imported user-manager PATH. Disabling the default
