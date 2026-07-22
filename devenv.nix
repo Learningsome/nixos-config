@@ -8,7 +8,7 @@
 
 {
   # https://devenv.sh/basics/
-  env.GREET = "devenv";
+  env.GREET = "NixOS";
 
   # https://devenv.sh/packages/
   packages = with pkgs; [
@@ -25,7 +25,7 @@
   # https://devenv.sh/basics/
   enterShell = ''
     echo ""
-    echo "🔧 NixOS $GREET environment ready!"
+    echo "🔧 $GREET environment ready!"
     echo "✅ Pre-commit hooks installed automatically"
     echo "📦 Run 'pre-commit run --all-files' to check everything manually"
   '';
