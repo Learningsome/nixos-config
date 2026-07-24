@@ -10,7 +10,7 @@
     eza
 
     # Will test this
-    devenv
+    unstable.devenv
 
     # IaC
     terraform

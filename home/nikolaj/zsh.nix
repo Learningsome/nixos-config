@@ -26,7 +26,7 @@ in {
         (mkZshPlugin zsh-history-substring-search "zsh-history-substring-search.zsh")
       ];
 
-      initExtra = ''
+      initContent = ''
         if command -v devenv >/dev/null; then
           eval "$(devenv hook zsh)"
         fi

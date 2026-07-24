@@ -6,8 +6,7 @@
   ...
 }: {
   # https://devenv.sh/basics/
-  env.GREET = "NixOS";
-  env.DEVSHELL_NAME = "";
+  # env.GREET = "NixOS";
 
   # https://devenv.sh/packages/
   packages = with pkgs; [
@@ -23,10 +22,10 @@
 
   # https://devenv.sh/basics/
   enterShell = ''
-    echo ""
-    echo "🔧 $GREET environment ready!"
-    echo "✅ Pre-commit hooks installed automatically"
-    echo "📦 Run 'pre-commit run --all-files' to check everything manually"
+    # Starship prompt fix
+    if [ -f .devenv/zsh/.zshrc ]; then
+      sed -i 's/(devenv) //' .devenv/zsh/.zshrc
+    fi
   '';
 
   # https://devenv.sh/tests/
