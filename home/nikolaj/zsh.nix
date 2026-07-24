@@ -26,6 +26,12 @@ in {
         (mkZshPlugin zsh-history-substring-search "zsh-history-substring-search.zsh")
       ];
 
+      initExtra = ''
+        if command -v devenv >/dev/null; then
+          eval "$(devenv hook zsh)"
+        fi
+      '';
+
       shellAliases = {
         # fun
         btw = "echo i use nixos, btw";

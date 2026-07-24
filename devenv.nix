@@ -7,6 +7,7 @@
 }: {
   # https://devenv.sh/basics/
   env.GREET = "NixOS";
+  env.DEVSHELL_NAME = "";
 
   # https://devenv.sh/packages/
   packages = with pkgs; [
