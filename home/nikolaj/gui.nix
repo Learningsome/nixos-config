@@ -7,7 +7,7 @@
   home.packages = with pkgs; [
     # Development
     obsidian
-    termius
+    qbittorrent
 
     # Social
     vesktop

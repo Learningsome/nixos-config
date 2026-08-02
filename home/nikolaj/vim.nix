@@ -9,12 +9,11 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
+      ale
       vim-nix
       fzf-vim
-      vim-lsp
       lightline-vim
-      asyncomplete-vim
-      asyncomplete-lsp-vim
+      lightline-ale
       # onedark-vim
     ];
 
@@ -56,52 +55,45 @@
       " colorscheme onedark
       " let g:lightline = { 'colorscheme': 'onedark', }
 
-      " Настройки lsp nix
-      if executable('nil')
-          au User lsp_setup call lsp#register_server({
-              \ 'name': 'nil',
-              \ 'cmd': {server_info->['nil']},
-              \ 'allowlist': ['nix'],
-              \ })
-      endif
+      " === ale основные настройки ===
+      let g:ale_fixers = {
+      \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \   'nix': ['alejandra'],
+      \   'terraform': ['terraform'],
+      \}
+      let g:ale_fix_on_save = 1
+      let g:ale_linters = {
+      \   'nix': ['nix', 'statix', 'deadnix'],
+      \   'terraform': ['terraform', 'terraformls', 'tfsec'],
+      \}
+      let g:ale_lint_on_save = 1
+      let g:ale_lint_on_insert_leave = 0
+      let g:ale_lint_on_enter = 1
+      let g:ale_lint_on_text_changed = 'never'
+      let g:ale_completion_enabled = 1
+      let g:ale_sign_column_always = 1
 
-      function! s:on_lsp_buffer_enabled() abort
-          setlocal omnifunc=lsp#complete
-          setlocal signcolumn=yes
-          if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-          nmap <buffer> gd <plug>(lsp-definition)
-          nmap <buffer> gs <plug>(lsp-document-symbol-search)
-          nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
-          nmap <buffer> gr <plug>(lsp-references)
-          nmap <buffer> gi <plug>(lsp-implementation)
-          nmap <buffer> gt <plug>(lsp-type-definition)
-          nmap <buffer> <leader>rn <plug>(lsp-rename)
-          nmap <buffer> [g <plug>(lsp-previous-diagnostic)
-          nmap <buffer> ]g <plug>(lsp-next-diagnostic)
-          nmap <buffer> K <plug>(lsp-hover)
-          nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
-          nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
-
-          let g:lsp_format_sync_timeout = 1000
-          " autocmd! BufWritePre *.nix call execute('LspDocumentFormatSync')
-          autocmd! BufWritePre *.nix silent! execute '%!alejandra -qq'
-
-          " refer to doc to add more commands
-      endfunction
-
-      augroup lsp_install
-          au!
-          " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-          autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-      augroup END
-
-      " Пробуем фолдинг
-      set foldmethod=expr
-        \ foldexpr=lsp#ui#vim#folding#foldexpr()
-        \ foldtext=lsp#ui#vim#folding#foldtext()
-
-      " Пробуем семантическую подсветку
-      let g:lsp_semantic_enabled = 1
+      " === lightline-ale ===
+      let g:lightline = {}
+      let g:lightline.component_expand = {
+            \ 'linter_checking': 'lightline#ale#checking',
+            \ 'linter_infos': 'lightline#ale#infos',
+            \ 'linter_warnings': 'lightline#ale#warnings',
+            \ 'linter_errors': 'lightline#ale#errors',
+            \ 'linter_ok': 'lightline#ale#ok',
+            \ }
+      let g:lightline.component_type = {
+            \ 'linter_checking': 'right',
+            \ 'linter_infos': 'right',
+            \ 'linter_warnings': 'warning',
+            \ 'linter_errors': 'error',
+            \ 'linter_ok': 'right',
+            \ }
+      let g:lightline.active = {
+            \ 'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ],
+            \ [ 'lineinfo' ],
+          \ [ 'percent' ],
+          \ [ 'fileformat', 'fileencoding', 'filetype'] ] }
     '';
   };
 }

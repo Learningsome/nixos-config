@@ -8,6 +8,7 @@
     ./zsh.nix
     ./git.nix
     ./kitty.nix
+    ./fastfetch.nix
     ./vim.nix
     ./vscodium.nix
     ./packages.nix

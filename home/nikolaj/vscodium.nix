@@ -8,6 +8,7 @@
     nixfmt # Nix formatter
     alejandra
     nil # Nix LSP
+    nixd
   ];
 
   programs.vscodium = {
@@ -18,6 +19,7 @@
       enableExtensionUpdateCheck = false;
       extensions = with pkgs.vscode-extensions; [
         jnoortheen.nix-ide # Поддержка языка Nix
+        christian-kohler.path-intellisense # Автозаполнение path
         alefragnani.project-manager # Менеджер проектов
         ms-azuretools.vscode-containers # Работа с Docker
         hashicorp.terraform # IaC
@@ -44,14 +46,17 @@
 
         # Интеграция Nix LSP (nil + alejandra)
         "nix.enableLanguageServer" = true;
-        "nix.serverPath" = "nil";
+        "nix.serverPath" = "nixd";
         "nix.serverSettings" = {
-          "nil" = {
+          "nixd" = {
             "formatting" = {
               "command" = ["alejandra"];
             };
-            "diagnostics" = {
-              "ignored" = ["unused_binding"];
+            "nixos" = {
+              "expr" = "(builtins.getFlake \"/home/nikolaj/nixos-config\").nixosConfigurations.nixos-btw.options";
+            };
+            "home-manager" = {
+              "expr" = "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.nixos-btw.options.home-manager.users.type.getSubOptions []";
             };
           };
         };
