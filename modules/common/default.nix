@@ -14,6 +14,4 @@
     ./packages.nix
     ./sudo.nix
   ];
-
-  nixpkgs.config.allowUnfree = true;
 }

@@ -19,6 +19,7 @@
     ./librewolf.nix
     ./firefox.nix
     ./keepassxc.nix
+    ./nvim.nix
   ];
 
   home = {

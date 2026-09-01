@@ -4,24 +4,28 @@
   pkgs,
   ...
 }: {
-  nix.settings = {
-    auto-optimise-store = true;
-    warn-dirty = false;
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+      warn-dirty = false;
 
-    trusted-users = [
-      "root"
-      "@wheel"
-    ];
+      trusted-users = [
+        "root"
+        "@wheel"
+      ];
 
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 14d";
+    };
   };
 
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 14d";
-  };
+  nixpkgs.config.allowUnfree = true;
 }

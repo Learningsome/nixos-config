@@ -7,5 +7,6 @@
   imports = [
     ./intel.nix
     ./bluetooth.nix
+    ./virtualization.nix
   ];
 }

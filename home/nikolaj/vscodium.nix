@@ -5,10 +5,8 @@
   ...
 }: {
   home.packages = with pkgs; [
-    nixfmt # Nix formatter
-    alejandra
-    nil # Nix LSP
-    nixd
+    alejandra # Nix formatter
+    nixd # Nix LSP
   ];
 
   programs.vscodium = {

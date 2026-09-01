@@ -8,6 +8,7 @@
     # Terminal utilities
     bat
     eza
+    ripgrep
 
     # Will test this
     devenv
