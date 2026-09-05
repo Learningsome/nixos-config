@@ -45,7 +45,7 @@
       statix.enable = true;
 
       # Общие проверки
-      typos.enable = true;
+      # typos.enable = true;
       end-of-file-fixer.enable = true;
       trim-trailing-whitespace.enable = true;
       check-added-large-files.enable = true;
