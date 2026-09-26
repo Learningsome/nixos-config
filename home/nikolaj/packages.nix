@@ -1,9 +1,5 @@
 # home/nikolaj/packages.nix
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     # Terminal utilities
     bat
@@ -11,6 +7,7 @@
     ripgrep
     dust
     duf
+    lazygit
 
     # Will test this
     devenv

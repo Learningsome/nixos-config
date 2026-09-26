@@ -40,11 +40,16 @@ in {
 
         # tools
         cat = "bat";
-        ls = "eza --icons=auto --git";
+        grep = "rg --color=auto";
+        ls = "eza --icons=auto --group-directories-first";
+        la = "eza --all --icons=auto --group-directories-first";
+        l = "eza --long --icons=auto --group-directories-first";
+        ll = "eza --long --all --icons=auto --group-directories-first";
         tree = "eza --tree --icons=auto --git-ignore";
 
         # git
         g = "git";
+        lg = "lazygit";
         gs = "g status";
         ga = "g add";
         gc = "g commit";
@@ -74,8 +79,9 @@ in {
         size = 10000;
         save = 10000;
 
-        ignoreAllDups = true;
+        expireDuplicatesFirst = true;
         ignoreSpace = true;
+        findNoDups = true;
         share = true;
       };
     };
