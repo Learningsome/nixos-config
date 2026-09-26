@@ -1,9 +1,5 @@
 # home/nikolaj/default.nix
-{
-  config,
-  pkgs,
-  ...
-}: {
+_: {
   imports = [
     ./zsh.nix
     ./git.nix
@@ -12,7 +8,6 @@
     ./vim.nix
     ./vscodium.nix
     ./packages.nix
-    ./gui.nix
     ./noctalia
     ./yazi.nix
     ./udiskie.nix

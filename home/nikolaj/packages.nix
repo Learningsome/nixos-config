@@ -9,11 +9,13 @@
     duf
     lazygit
 
-    # Will test this
+    # Using this for dev environments
     devenv
 
-    # IaC
-    terraform
-    terragrunt
+    # GUI
+    obsidian
+    qbittorrent
+    vesktop
+    telegram-desktop
   ];
 }
