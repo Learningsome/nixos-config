@@ -17,6 +17,7 @@ _: {
     ./nvim
     ./helix.nix
     ./zed.nix
+    ./niri
   ];
 
   home = {

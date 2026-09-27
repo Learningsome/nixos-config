@@ -2,6 +2,7 @@
 {
   inputs,
   config,
+  pkgs,
   ...
 }: let
   noctaliaPath = "${config.home.homeDirectory}/nixos-config/home/nikolaj/noctalia";
@@ -33,4 +34,9 @@ in {
       recursive = true;
     };
   };
+
+  home.packages = with pkgs; [
+    # Brightness control
+    ddcutil
+  ];
 }

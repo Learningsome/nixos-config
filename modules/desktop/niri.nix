@@ -1,10 +1,5 @@
 # modules/desktop/niri.nix
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   programs.niri = {
     enable = true;
     package = pkgs.unstable.niri;
