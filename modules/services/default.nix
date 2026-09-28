@@ -1,9 +1,5 @@
 # modules/services/default.nix
-{
-  config,
-  pkgs,
-  ...
-}: {
+_: {
   imports = [
     ./docker.nix
     ./amnezia-vpn.nix
@@ -14,5 +10,6 @@
     ./noctalia-greeter.nix
     ./udisks2.nix
     ./thermald.nix
+    ./localsend.nix
   ];
 }

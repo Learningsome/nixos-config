@@ -17,7 +17,6 @@ _: {
     ./nvim
     ./helix.nix
     ./niri
-    ./localsend.nix
   ];
 
   home = {
