@@ -16,7 +16,6 @@ _: {
     ./keepassxc.nix
     ./nvim
     ./helix.nix
-    ./zed.nix
     ./niri
   ];
 
