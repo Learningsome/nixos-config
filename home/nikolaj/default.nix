@@ -3,9 +3,10 @@ _: {
   imports = [
     ./zsh.nix
     ./git.nix
-    ./kitty.nix
+    # ./kitty.nix
+    ./foot.nix
     ./fastfetch.nix
-    ./vim.nix
+    # ./vim.nix
     ./vscodium.nix
     ./packages.nix
     ./noctalia
