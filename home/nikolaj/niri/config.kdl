@@ -410,8 +410,8 @@ binds {
     Mod+F1 { spawn "noctalia" "msg" "panel-toggle" "kenn/keybind-cheatsheet:cheatsheet"; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+E hotkey-overlay-title="Open file manager: yazi" { spawn "kitty" "-e" "yazi"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "footclient"; }
+    Mod+E hotkey-overlay-title="Open file manager: yazi" { spawn "footclient" "-e" "yazi"; }
     Mod+Space hotkey-overlay-title="Open app launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+Shift+S hotkey-overlay-title="Open control center" { spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+S hotkey-overlay-title="Toggle settings" { spawn-sh "noctalia msg settings-toggle"; }
