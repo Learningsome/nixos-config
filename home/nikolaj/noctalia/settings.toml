@@ -164,11 +164,11 @@ builtin = "Eldritch"
 community_palette = "Everforest"
 mode = "dark"
 source = "wallpaper"
-wallpaper_scheme = "faithful"
+wallpaper_scheme = "soft"
 
     [theme.templates]
-    builtin_ids = [ "btop", "gtk3", "gtk4", "helix", "kcolorscheme", "kitty", "niri", "qt" ]
-    community_ids = [ "discord", "telegram", "neovim", "obsidian", "vscode", "zed", "bat", "fzf", "lazygit" ]
+    builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "helix", "kcolorscheme", "kitty", "niri", "qt" ]
+    community_ids = [ "discord", "telegram", "neovim", "obsidian", "vscode", "bat", "fzf", "lazygit" ]
 
 [wallpaper]
 directory = "~/Pictures/Wallpapers"
