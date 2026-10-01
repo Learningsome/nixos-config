@@ -8,6 +8,8 @@
     dust
     duf
     lazygit
+    fd
+    cmatrix
 
     # Using this for dev environments
     devenv
