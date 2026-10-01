@@ -2,6 +2,8 @@
   # Enabling QEMU+KVM and virt-manager
   virtualisation.libvirtd = {
     enable = true;
+    onBoot = "ignore";
+    onShutdown = "shutdown";
     qemu.vhostUserPackages = with pkgs; [virtiofsd];
   };
   programs.virt-manager.enable = true;
