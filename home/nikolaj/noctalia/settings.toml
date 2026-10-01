@@ -168,7 +168,7 @@ wallpaper_scheme = "soft"
 
     [theme.templates]
     builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "helix", "kcolorscheme", "kitty", "niri", "qt" ]
-    community_ids = [ "discord", "telegram", "neovim", "obsidian", "vscode", "bat", "fzf", "lazygit" ]
+    community_ids = [ "discord", "telegram", "neovim", "obsidian", "vscode", "obs", "bat", "fzf", "lazygit" ]
 
 [wallpaper]
 directory = "~/Pictures/Wallpapers"

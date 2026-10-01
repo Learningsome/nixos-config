@@ -18,6 +18,7 @@ _: {
     ./nvim
     ./helix.nix
     ./niri
+    ./obs-studio.nix
   ];
 
   home = {
