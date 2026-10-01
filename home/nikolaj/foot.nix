@@ -11,7 +11,6 @@ _: {
       main = {
         include = "~/.config/foot/themes/noctalia";
         font = "JetBrainsMono Nerd Font:size=14";
-        selection-target = "clipboard";
         bold-text-in-bright = "palette-based";
         pad = "15x0 center-when-maximized-and-fullscreen";
         dpi-aware = "no";
@@ -33,6 +32,15 @@ _: {
         blink = "yes";
         blink-rate = 500;
         unfocused-style = "hollow";
+      };
+      security = {
+        osc52 = "copy-enabled";
+      };
+      bell = {
+        system = "no";
+        urgent = "yes";
+        notify = "no";
+        visual = "no";
       };
     };
   };
