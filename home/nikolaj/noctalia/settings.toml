@@ -8,6 +8,7 @@ order = [ "top-bar", "bottom-bar" ]
     center = [ "workspaces" ]
     enabled = true
     end = [ "volume", "brightness", "network", "bluetooth", "privacy" ]
+    margin_ends = 300
     position = "bottom"
     radius = 20
     reserve_space = false
@@ -19,7 +20,7 @@ order = [ "top-bar", "bottom-bar" ]
     background_opacity = 0.84999998100101948
     center = [ "date", "clock" ]
     end = [ "tray", "notifications", "clipboard", "wallpaper", "wallhaven", "battery", "session" ]
-    margin_edge = 2
+    margin_edge = 3
     margin_ends = 5
     padding = 15
     radius = 20
@@ -175,13 +176,13 @@ directory = "~/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/nikolaj/Pictures/Wallpapers/wallhaven-n65xv7.jpg"
+    path = "/home/nikolaj/Pictures/Wallpapers/wallhaven-0w9vjr.jpg"
 
     [wallpaper.last]
-    path = "/home/nikolaj/Pictures/Wallpapers/wallhaven-n65xv7.jpg"
+    path = "/home/nikolaj/Pictures/Wallpapers/wallhaven-0w9vjr.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/nikolaj/Pictures/Wallpapers/wallhaven-n65xv7.jpg"
+    path = "/home/nikolaj/Pictures/Wallpapers/wallhaven-0w9vjr.jpg"
 
 [widget.Spacer_20]
 type = "spacer"
