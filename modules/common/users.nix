@@ -9,7 +9,7 @@
   users.users.nikolaj = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    description = "Nikolaj is using NixOS btw";
+    description = "Nikolaj";
     extraGroups = [
       "networkmanager"
       "wheel"
